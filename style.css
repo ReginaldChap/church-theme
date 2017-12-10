@@ -28,13 +28,43 @@ h1, h2 {
     grid-template-columns: 1fr minmax(300px, 960px) 1fr;
     background-color: beige;
 }
+.header {
+	grid-column: 1 / span 3;
+    grid-row: 1;
+    background-image: url("css/img/lake-2063957_1920.jpg");
+    background-size: cover;
+	height: 100vh;
+}
 
+.header .content {
+    display: grid;
+    grid-template-columns: 1fr minmax(300px, 960px) 1fr;
+    height: 100vh;
+}
+
+.header .sub-grid {
+    grid-column: 2 / span 1;
+    height: 100%;
+}
+.title {
+	justify-self: center;
+	align-self: center;
+	grid-column: 1 / span 12;
+}
+.header-img {
+    align-self: top;
+    grid-column: 4 / span 2;
+    width: 100%;
+    clip-path: circle(50px at 50% 50%);
+}
+.header-quote {
+    grid-column: 6 / span 6;
+}
 .content {
 	grid-column-start: 2;
 	grid-column-end: 2;
 	/* width: 100%; */
-	background-color: blue;
-	margin: 0 5px;
+	margin: 10px 5px;
 	padding: 0 10px;
 }
 
@@ -66,8 +96,50 @@ h1, h2 {
     
 }
 
-
-
 /* FLEX */
 
+.flex-container {
+    grid-column: 1 / span 12;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.flex-box {
+    width: 200px;
+    padding: 10px;
+    margin: 20px 0;
+    background-color: gray;
+}
+.leadership-img {
+    max-width: 100%;
+    clip-path: circle(50px at 50% 50%);
+    height: 100px;
+}
+
+@media (max-width: 500px) {
+    .flex-box {
+        width: 100%;
+    }
+
+    .leadership-text {
+        float: right;
+    }
+    .leadership-img {
+        float: left;
+        max-width: 33%;
+    }
+}
+
+/* SECTION */
+
+section::after {
+    content: "";
+    display: block;
+    margin: 10px 20%;
+    border-bottom: 1px solid gray;
+}
+
+/* IMages */
 
