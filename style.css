@@ -11,22 +11,33 @@ body {
     line-height: 1.4em;
 }
 
-h1, h2 {
+h1, h2, h3, h4 {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.title h1, .title h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+.title {
+    color: #fff;    
+    font-size: 2.6em;
+}
+
+.section-title {
+    font-size: 1.8em;
+}
 
 /* GRID */
 
 #grid-container {
   width: 100%;
-  background-color: red;
 }
 
 #main-grid {
     display: grid;
     grid-template-columns: 1fr minmax(300px, 960px) 1fr;
-    background-color: beige;
 }
 .header {
 	grid-column: 1 / span 3;
@@ -41,24 +52,33 @@ h1, h2 {
     grid-template-columns: 1fr minmax(300px, 960px) 1fr;
     height: 100vh;
 }
-
 .header .sub-grid {
     grid-column: 2 / span 1;
     height: 100%;
 }
+.footer .content {
+    display: grid;
+    grid-template-columns: 1fr minmax(300px, 960px) 1fr;
+    
+}
+.footer .sub-grid {
+    grid-column: 2 / span 1;
+}
+
 .title {
 	justify-self: center;
 	align-self: center;
-	grid-column: 1 / span 12;
+    grid-column: 1 / span 12;
 }
 .header-img {
     align-self: top;
     grid-column: 4 / span 2;
     width: 100%;
-    clip-path: circle(50px at 50% 50%);
+    clip-path: circle(70px at 50% 50%);
 }
 .header-quote {
-    grid-column: 6 / span 6;
+    grid-column: 6 / span 4;
+    color: #fff;
 }
 .content {
 	grid-column-start: 2;
@@ -106,25 +126,33 @@ h1, h2 {
     margin: 10px 0;
 }
 
-.flex-box {
-    width: 200px;
-    padding: 10px;
-    margin: 20px 0;
-    background-color: gray;
+.flex-box-leadership {
+	width: 25%;
+	padding: 10px;
+	margin: 20px 20px;
+	flex-grow: 1;
 }
 .leadership-img {
-    max-width: 100%;
+    width: 100px;
     clip-path: circle(50px at 50% 50%);
     height: 100px;
 }
+.flex-box-bulletin {
+	width: 25%;
+	flex-grow: 1;
+	padding: 10px;
+	margin: 20px 20px;
+border: solid 1px #dedede;	/* flex-flow: 20px; */
+}
 
-@media (max-width: 500px) {
-    .flex-box {
-        width: 100%;
+@media (max-width: 767px) {
+    .flex-box-leadership {
+       width: 100%;
     }
 
     .leadership-text {
         float: right;
+        width: 70%;
     }
     .leadership-img {
         float: left;
@@ -134,12 +162,58 @@ h1, h2 {
 
 /* SECTION */
 
+.section-title {
+    grid-column: 1 / span 6;
+}
+
 section::after {
     content: "";
     display: block;
     margin: 10px 20%;
     border-bottom: 1px solid gray;
 }
+
+
+/* Sermans */
+
+.serman-container {
+    grid-column: 1 / span 12;
+}
+.serman-text {
+    grid-column: 1 / span 9;
+}
+.serman-img {
+	width: 200px;
+	grid-column: 10 / span 3;
+	margin-top: 30px;
+}
+
+/* Contact */
+
+.contact-img {
+    width: 100%;
+}
+
+.location-map {
+	grid-column: 1 / span 3;
+/*    background-image: url("css/img/lake-2063957_1920.jpg");*/
+}
+
+.map-img {
+    width: 100%;
+}
+
+/* FOoter*/ 
+footer {
+    grid-column: 1 / span 3;
+    background-color: rgb(210, 199, 247);
+}
+
+.footer-col {
+grid-column-end: span 4;
+}
+
+
 
 /* IMages */
 
