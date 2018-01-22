@@ -89,8 +89,8 @@ h4 {
 .header-img {
     align-self: top;
     grid-column: 4 / span 2;
-    width: 100%;
-    clip-path: circle(70px at 50% 50%);
+    
+    /*clip-path: circle(70px at 50% 50%);*/
 }
 
 .header-quote {
@@ -165,6 +165,7 @@ h4 {
     width: 100px;
     clip-path: circle(50px at 50% 50%);
     height: 100px;
+    margin-top: 20px;
 }
 
 .flex-box-bulletin {
