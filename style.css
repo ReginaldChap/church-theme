@@ -81,9 +81,11 @@ h4 {
 }
 
 .title {
+    color: darkslategray;
     justify-self: center;
     align-self: center;
     grid-column: 1 / span 12;
+    filter: drop-shadow(0 0 15px gray);
 }
 
 .header-img {
@@ -95,7 +97,8 @@ h4 {
 
 .header-quote {
     grid-column: 6 / span 4;
-    color: #fff;
+    color: darkslategray;
+    filter: drop-shadow(0 0 0.5em gray);
 }
 
 .content {
@@ -136,6 +139,7 @@ h4 {
     }
     .header-quote {
         grid-column: 1 / span 1;
+        filter: drop-shadow(0 0 0.5em gray);
     }
     .header-img {
         grid-column: 1 / span 1;
